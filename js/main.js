@@ -18,7 +18,8 @@ var sections = [
   'services',
   'portfolio',
   'our-story',
-  'contact-us',
+  'chillingriders',
+  // 'contact-us',
   'footer',
 ]
 

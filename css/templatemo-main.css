@@ -22,6 +22,22 @@ https://templatemo.com/tm-526-vanilla
   font-family: gutters;
   src: url(../fonts/custom/gutters_butter/Gutter\ Butter\ Rounded\ Bold.ttf);
 }
+@font-face {
+  font-family: monserratbold;
+  src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: monserratsemibold;
+  src: url(../fonts/moserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: monserratmedium;
+  src: url(../fonts/moserrat/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: monserratextrabold;
+  src: url(../fonts/moserrat/Montserrat-ExtraBold.ttf);
+}
 
 p {
   font-size: 15px;
@@ -172,9 +188,9 @@ a:hover { color: #FF0; }
   font-family: futuraLogo;
 }
 
-#logo1 h1{
+/* #logo1 h1{
   font-size: 80px;
-}
+} */
 
 .colorBlack{
   color: black;
@@ -545,9 +561,9 @@ footer em {
   .baner-content h1 {
     font-size: 64px;
   }
-  #logo1 h1{
+  /* #logo1 h1{
     font-size: 54px !important;
-  }
+  } */
 
   .baner-content em {
   }
