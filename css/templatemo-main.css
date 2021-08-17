@@ -39,6 +39,40 @@ https://templatemo.com/tm-526-vanilla
   src: url(../fonts/moserrat/Montserrat-ExtraBold.ttf);
 }
 
+.projectAnchor{
+  text-decoration: none !important;
+}
+
+#backToHome a:hover{
+  color: lightgray !important;
+}
+
+#linksContacto :hover{
+  cursor: pointer;
+}
+
+#footerLinks span a:hover{
+  cursor: pointer;
+  color: lightgray !important;
+}
+
+.menuViewItem h1:hover{
+  cursor: pointer;
+  color: lightgray;
+}
+#closeMenuView:hover{
+  cursor: pointer;
+  color: lightgray;
+}
+
+.menuViewItem{
+  padding-left: 5vw;
+}
+.menuViewItem h1{
+  font-family: monserratextrabold;
+  font-size: 15vh !important;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -237,10 +271,79 @@ a:hover { color: #FF0; }
   font-family: futuraPT;
 }
 
+
+div.circle {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  top: 50px;
+  left: 50px;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  text-align: center;
+  background: #006CFF;
+  color: white;
+  border-radius: 100%;
+  padding: 20px;
+  overflow: hidden;
+  
+  font-family: sans-serif;  /* Just 'cos */
+}
+
+.c{
+  width: 0px;
+  height: 0px;
+  /* -webkit-transition-duration: 2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out; */
+  text-align: center;
+  background: #006CFF;
+  color: white;
+  border-radius: 100%;
+  padding: 20px;
+  overflow: hidden;
+  
+  font-family: sans-serif;
+}
+
+div.open {
+  top: 0px;
+  left: 0px;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  margin-top: "-20px";
+                margin-left: "-20px";
+}
+
+
+
+
+
+.box {
+  position:absolute;
+  /* width: 100px;; */
+  /* height: 50px; */
+  /* border: 1px grey solid; */
+  float: left;
+  margin-bottom: 15px;
+}
+
+.box:nth-child(odd) {
+float: right;
+}
+
 #enBuscaDe span{
   /* font-size: 31px !important; */
 }
 
+#menuCircleSvg{
+  color: white;
+  cursor: pointer;
+}
 
 .service-content {
   padding-left: 15px;
