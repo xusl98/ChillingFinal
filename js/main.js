@@ -22,6 +22,7 @@ var sections = [
   'portfolio',
   'our-story',
   'chillingriders',
+  'healthFit',
   // 'contact-us',
   'footer',
 ]
@@ -158,19 +159,19 @@ jQuery(document).ready(function ($) {
 
 function setListeners() {
   $('.linkedin').on("click", function () {
-    alert('todo')
+      location.href = 'https://www.linkedin.com/company/chilling-studios/about/?viewAsMember=true';
   });
   $('.instagram').on("click", function () {
-    location.href = 'https://www.instagram.com/chilling.studios/';
+      location.href = 'https://www.instagram.com/chilling.studios/';
   });
   $('.facebook').on("click", function () {
-    alert('todo')
+      location.href = 'https://www.facebook.com/Chillingstudios-100375035035397';
   });
   $('.twitter').on("click", function () {
-    location.href = 'https://twitter.com/ChillingStudios';
+      location.href = 'https://twitter.com/ChillingStudios';
   });
   $('.mail').on("click", function () {
-    alert('todo')
+      location.href="mailto:info@chillingstudios.com";
   });
 }
 
