@@ -58,8 +58,64 @@ function positionCircleClone() {
   console.log(clone.style.left)
 }
 
+function positionCircleCloneMobile() {
+  var circle = document.getElementById('menuCircleSvgMobile');
+  var clone = document.getElementById('menuCircleSvgCloneMobile');
+  var x = circle.getBoundingClientRect();
+  console.log(x.left)
+  clone.style.top = x.top + 'px';
+  clone.style.left = x.left + 'px';
+  clone.style.left = x.left + 'px';
+  console.log(clone.style.left)
+  // $('#prueba').html(x.top + '<br>' + clone.style.top);
+  
+}
+
+isMobile = false;
 
 jQuery(document).ready(function ($) {
+
+  
+
+  this.isMobile = matchMedia('(max-width: 500px)').matches;
+  console.log(this.isMobile)
+  if (this.isMobile){
+
+    $(document.body).on('touchmove', positionCircleCloneMobile)
+    $(window).on('scroll', positionCircleCloneMobile)
+
+    // positionCircleCloneMobile
+
+    let mobileHeight = document.documentElement.clientHeight;
+    
+    $('html').css('height', mobileHeight);
+    $('body').css('height', mobileHeight);
+    $('#mobile').css('height', mobileHeight);
+    $('#mobileContainer').css('height', mobileHeight);
+    $('#bienvenidoMobile').css('height', mobileHeight);
+    $('#blackAnchorMobile').css('height', mobileHeight);
+    $('#masvokMobile').css('height', mobileHeight);
+    $('#chillingRidersMobile').css('height', mobileHeight);
+    $('#healthFitMobile').css('height', mobileHeight);
+    $('#menuMobile').css('height', mobileHeight);
+    
+    
+    $('body').css('overflow-y', 'auto');
+    $('#mobile').css('display', 'inline');
+    $('#pc').css('display', 'none');
+    $('html').css('overflow-x', 'hidden');
+
+
+    positionCircleCloneMobile();
+
+    $('html').css('height', '100vh')
+    $('body').css('height', '100vh')
+
+  } else {
+    $('#pc').css('display', 'inline');
+    $('#mobile').css('display', 'none');
+    
+
   positionCircleClone();
 
   //   setTimeout(function() {
@@ -154,6 +210,8 @@ jQuery(document).ready(function ($) {
 
   setListeners();
 
+}
+
 });
 
 
@@ -201,6 +259,70 @@ function openMenu() {
     }, 1200, () => {
       $('#menuView').css('visibility', 'visible').css('z-index', '999');
     });
+}
+
+function openMenuMobile() { 
+
+  positionCircleCloneMobile();
+  $('#menuCircleSvgMobile').css('visibility', 'visible')
+  
+  if ($('.box').css('width').split('px')[0] < 7000){
+
+  console.log('a')
+  $('body').css('overflow-y', 'hidden');
+
+
+  var _this = $('.box');
+  startHeight = _this.css("height");
+  startWidth = _this.css("width");
+  var newWidth = parseInt(_this.css("width")) + 7000,
+    newHeight = parseInt(_this.css("height")) + 7000;
+
+
+  _this.
+    css("z-index", 28).
+    animate({
+      width: newWidth + "px",
+      height: newHeight + "px",
+      marginTop: "-5000px",
+      marginLeft: "-5000px"
+    }, 1200, () => {
+      $('#menuViewMobile').css('visibility', 'visible').css('z-index', '999');
+      $('#menuViewMobile').css('position', 'fixed').css('top', '0');
+      $('#menuView').css('height', document.documentElement.clientHeight);
+    });
+  }
+}
+
+function closeMenuViewMobile() {
+  var _this = $('.box');
+  _this.css("z-index", 0);
+  $('#menuViewMobile').css('visibility', 'hidden');
+  _this.css("height", startHeight);
+  _this.css("width", startWidth);
+  _this.css("margin-left", 0);
+  _this.css("margin-top", 0);
+  $('body').css('overflow-y', 'auto');
+  $('#menuCircleSvgMobile').css('visibility', 'hidden')
+  // positionCircleCloneMobile();
+}
+
+function openSectionMobile(section) {
+  switch (section) {
+    case 'Hola':
+      // window.location.href = "/index.html";
+      closeMenuViewMobile();
+      break;
+    case 'Servicios':
+      window.location.href = "./sections/servicios/mobile/serviciosMobile.html";
+      break;
+    case 'Equipo':
+      window.location.href = "./sections/equipo/mobile/equipoMobile.html";
+      break;
+    case 'Contacto':
+      window.location.href = "./sections/contacto/mobile/contactoMobile.html";
+      break;
+  }
 }
 
 function openSection(section) {

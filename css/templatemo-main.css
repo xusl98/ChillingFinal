@@ -306,6 +306,21 @@ div.circle {
   
   font-family: sans-serif;
 }
+.cMobile{
+  width: 0px;
+  height: 0px;
+  /* -webkit-transition-duration: 2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out; */
+  text-align: center;
+  background: #006CFF;
+  color: white;
+  border-radius: 100%;
+  padding: 30px;
+  overflow: hidden;
+  
+  font-family: sans-serif;
+}
 
 div.open {
   top: 0px;
