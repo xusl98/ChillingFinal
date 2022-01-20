@@ -84,13 +84,13 @@ function openMenuMobile() {
         window.location.href = "../../../index.html";
         break;
       case 'Servicios':
-        window.location.href = "../../servicios/mobile/serviciosMobile.html";
+        closeMenuViewMobile();
         break;
       case 'Equipo':
         window.location.href = "../../equipo/mobile/equipoMobile.html";
         break;
-      case 'Contacto':
-        closeMenuViewMobile();
+        case 'Contacto':
+        window.location.href = "../../contacto/mobile/contactoMobile.html";
         break;
     }
   }

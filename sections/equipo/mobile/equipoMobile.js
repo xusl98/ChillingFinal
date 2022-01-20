@@ -87,10 +87,10 @@ function openMenuMobile() {
         window.location.href = "../../servicios/mobile/serviciosMobile.html";
         break;
       case 'Equipo':
-        window.location.href = "../../equipo/mobile/equipoMobile.html";
-        break;
-      case 'Contacto':
         closeMenuViewMobile();
+        break;
+        case 'Contacto':
+        window.location.href = "../../contacto/mobile/contactoMobile.html";
         break;
     }
   }
