@@ -111,6 +111,8 @@ jQuery(document).ready(function ($) {
     $('html').css('height', '100vh')
     $('body').css('height', '100vh')
 
+    setListeners();
+
   } else {
     $('#pc').css('display', 'inline');
     $('#mobile').css('display', 'none');
