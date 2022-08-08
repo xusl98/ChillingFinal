@@ -1,0 +1,85 @@
+    /* For 4 texts */
+    .textcarousel, .textcarousel2, .textcarousel3, .textcarousel4, .textcarousel5{
+        pointer-events: none;
+        opacity: 0;
+    }
+    .textcarousel{
+        -webkit-animation: tcarousel 15s ease infinite;
+                animation: tcarousel 15s ease infinite;
+    }
+    .textcarousel2{
+        -webkit-animation: tcarousel 15s ease -5s infinite;
+                animation: tcarousel 15s ease -5s infinite;
+    }
+    .textcarousel3{
+        -webkit-animation: tcarousel 15s ease 5s infinite;
+                animation: tcarousel 15s ease 5s infinite;
+    }
+    .textcarousel4{
+        -webkit-animation: tcarousel 15s ease 10s infinite;
+                animation: tcarousel 15s ease 10s infinite;
+    }
+    .textcarousel5{
+        -webkit-animation: tcarousel 15s ease 10s infinite;
+                animation: tcarousel 15s ease 10s infinite;
+    }
+    @-webkit-keyframes tcarousel{
+        0%{
+            opacity: 0;
+            -webkit-transform: translateX(30px);
+                    transform: translateX(30px);
+            pointer-events: none;
+        }
+        6%{
+            opacity: 1;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            pointer-events: all;
+        }
+        24%{
+            opacity: 1;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            pointer-events: all;
+        }
+        30%{
+            opacity: 0;
+            -webkit-transform: translateX(-30px);
+                    transform: translateX(-30px);
+            pointer-events: none;
+        }
+        100%{
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    @keyframes tcarousel{
+        0%{
+            opacity: 0;
+            -webkit-transform: translateX(30px);
+                    transform: translateX(30px);
+            pointer-events: none;
+        }
+        6%{
+            opacity: 1;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            pointer-events: all;
+        }
+        24%{
+            opacity: 1;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            pointer-events: all;
+        }
+        30%{
+            opacity: 0;
+            -webkit-transform: translateX(-30px);
+                    transform: translateX(-30px);
+            pointer-events: none;
+        }
+        100%{
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
